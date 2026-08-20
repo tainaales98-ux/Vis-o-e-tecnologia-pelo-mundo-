@@ -5,24 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ciência, Visão e Tecnologia pelo Mundo</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* CSS para controlar a exibição das abas */
+  .tab-content {
+    display: none; /* Esconde todas as seções por padrão */
+  }
+  
+  .tab-content.active {
+    display: block; /* Exibe apenas a aba ativa */
+  }
+
+  /* Estilização básica do menu para parecer abas clicáveis */
+  .nav-menu li a {
+    cursor: pointer;
+  }
+
+  .nav-menu li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
 
-<!-- Menu de Navegação Superior Fixa -->
+<!-- Menu de Navegação Superior Fixa (Atua como Selecionador de Abas) -->
 <header class="navbar">
   <div class="nav-container">
     <span class="nav-logo">VISÃO & TECH</span>
     <nav>
       <ul class="nav-menu">
-        <li><a href="#introducao">Início</a></li>
-        <li><a href="#bengala-sensor">Sensor</a></li>
-        <li><a href="#como-enxergamos">Olho Humano</a></li>
-        <li><a href="#fisica-da-visao">Física</a></li>
-        <li><a href="#deficiencia-visual">Deficiências</a></li>
-        <li><a href="#como-funcionam-os-oculos">Óculos</a></li>
-        <li><a href="#tecnologias-assistivas">Assistivas</a></li>
-        <li><a href="#experimentos">Experimentos</a></li>
-        <li><a href="#outros">Mais</a></li>
+        <li><a class="tab-link active" onclick="openTab(event, 'introducao')">Início</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'bengala-sensor')">Sensor</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'como-enxergamos')">Olho Humano</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'fisica-da-visao')">Física</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'deficiencia-visual')">Deficiências</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'como-funcionam-os-oculos')">Óculos</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'tecnologias-assistivas')">Assistivas</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'experimentos')">Experimentos</a></li>
+        <li><a class="tab-link" onclick="openTab(event, 'outros')">Mais</a></li>
       </ul>
     </nav>
   </div>
@@ -30,8 +50,8 @@
 
 <main>
 
-  <!-- Cabeçalho Principal -->
-  <section id="introducao" class="site-section">
+  <!-- Cabeçalho Principal (Aba 1) -->
+  <section id="introducao" class="site-section tab-content active">
     <h1>Visão e Tecnologia pelo Mundo</h1>
 
     <p>A tecnologia tem sido uma grande aliada para garantir mais autonomia, acessibilidade e qualidade de vida para pessoas com cegueira ou baixa visão. Hoje em dia, dispositivos do cotidiano, como smartphones e computadores, já vêm equipados com recursos nativos que transformam a maneira como essas pessoas interagem com o mundo digital e físico. Os leitores de tela, como o VoiceOver no iPhone, o TalkBack no Android e o NVDA no Windows, convertem todo o texto exibido na tela em voz ou em código para uma linha Braille, permitindo navegar por menus, ler mensagens e acessar sites sem precisar enxergar a tela.</p>
@@ -41,13 +61,12 @@
     <h2>OBJETOS CRIADOS:</h2>
     <div class="card">
       <h3>Bengala com sensor de presença</h3>
-      <img src="Bengala.jpg" alt="." width="300" height="200">
-      </a>
+      <img src="Bengala.jpg" alt="Bengala com sensor de presença" width="300" height="200">
     </div>
   </section>
 
-  <!-- Seção Bengala / Sensor -->
-  <section id="bengala-sensor" class="site-section">
+  <!-- Seção Bengala / Sensor (Aba 2) -->
+  <section id="bengala-sensor" class="site-section tab-content">
     <h2>Bengala com Sensor de Presença</h2>
     <p>
     A bengala com sensor de presença é um dispositivo assistivo equipado com tecnologia que detecta obstáculos próximos ao usuário. Projetada para auxiliar pessoas com deficiência visual, ela utiliza sensores que emitem sinais e captam sua reflexão, alertando o usuário sobre barreiras no caminho através de vibrações ou sons. Esta tecnologia proporciona maior segurança e autonomia na locomoção diária.
@@ -102,8 +121,8 @@
     </div>
   </section>
 
-  <!-- Seção Anatomia da Visão -->
-  <section id="como-enxergamos" class="site-section">
+  <!-- Seção Anatomia da Visão (Aba 3) -->
+  <section id="como-enxergamos" class="site-section tab-content">
     <h2>Como Enxergamos?</h2>
 
     <h3>Anatomia do Olho Humano</h3>
@@ -126,8 +145,8 @@
     <p>As células da retina convertem a energia luminosa (fótons) em impulsos elétricos. O nervo óptico funciona como um cabo de fibra óptica, transmitindo esses sinais para o cérebro (córtex visual), que interpreta e "desvira" a imagem em tempo real.</p>
   </section>
 
-  <!-- Seção Física da Visão -->
-  <section id="fisica-da-visao" class="site-section">
+  <!-- Seção Física da Visão (Aba 4) -->
+  <section id="fisica-da-visao" class="site-section tab-content">
     <h2>A Física da Visão</h2>
 
     <h3>O que é Luz e o Espectro Eletromagnético</h3>
@@ -151,8 +170,8 @@
     </ul>
   </section>
 
-  <!-- Seção Deficiências Visuais -->
-  <section id="deficiencia-visual" class="site-section">
+  <!-- Seção Deficiências Visuais (Aba 5) -->
+  <section id="deficiencia-visual" class="site-section tab-content">
     <h2>Deficiência Visual: O que Acontece?</h2>
     <p>As deficiências visuais ocorrem quando a estrutura física do olho ou a transmissão do sinal óptico falham:</p>
     <ul>
@@ -165,8 +184,8 @@
     </ul>
   </section>
 
-  <!-- Seção Óculos e Lentes -->
-  <section id="como-funcionam-os-oculos" class="site-section">
+  <!-- Seção Óculos e Lentes (Aba 6) -->
+  <section id="como-funcionam-os-oculos" class="site-section tab-content">
     <h2>Como Funcionam os Óculos?</h2>
     <p>Quando o formato do olho não permite que a luz foque exatamente sobre a retina, ocorrem os erros de refração. Os óculos usam lentes para desviar a luz antes de ela entrar no olho, garantindo o foco correto.</p>
 
@@ -193,8 +212,8 @@
     </ul>
   </section>
 
-  <!-- Seção Tecnologias Assistivas e Som -->
-  <section id="tecnologias-assistivas" class="site-section">
+  <!-- Seção Tecnologias Assistivas e Som (Aba 7) -->
+  <section id="tecnologias-assistivas" class="site-section tab-content">
     <h2>Tecnologias Assistivas</h2>
     <p>As tecnologias assistivas são ferramentas que promovem a autonomia e a inclusão de pessoas com deficiência visual.</p>
     <ul>
@@ -223,8 +242,8 @@
     </div>
   </section>
 
-  <!-- Seção Experimentos Práticos -->
-  <section id="experimentos" class="site-section">
+  <!-- Seção Experimentos Práticos (Aba 8) -->
+  <section id="experimentos" class="site-section tab-content">
     <h2>Experimentos Práticos</h2>
     <p><em>Nota: Estes experimentos ajudam a entender como a luz se comporta e como nossos olhos processam as imagens.</em></p>
 
@@ -271,8 +290,8 @@
     </table>
   </section>
 
-  <!-- Seção Outros (Cientistas, Curiosidades, Mitos) -->
-  <section id="outros" class="site-section">
+  <!-- Seção Outros (Aba 9) -->
+  <section id="outros" class="site-section tab-content">
     <div id="curiosidades">
       <h2>Curiosidades Científicas</h2>
       <ul>
@@ -322,6 +341,27 @@
   </section>
 
 </main>
+
+<!-- Script para trocar as abas -->
+<script>
+function openTab(evt, tabName) {
+  // Esconde todas as seções com a classe tab-content
+  var tabContent = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabContent.length; i++) {
+    tabContent[i].classList.remove("active");
+  }
+
+  // Remove a classe "active" de todos os links da navegação
+  var tabLinks = document.getElementsByClassName("tab-link");
+  for (var i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].classList.remove("active");
+  }
+
+  // Exibe a seção/aba selecionada e marca o link como ativo
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+</script>
 
 </body>
 </html>
