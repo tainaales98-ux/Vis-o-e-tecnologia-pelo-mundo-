@@ -304,3 +304,22 @@
                                                                                                                                                                                                                                                                                                                                                                                     white-space: nowrap;
                                                                                                                                                                                                                                                                                                                                                                                       }
                                                                                                                                                                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                                                                                                                                                                      body {
+  /* Substitua 'fundo.jpg' pelo caminho da sua imagem */
+  background-image: url('Bengala.jpg'); 
+
+  /* Garante que a imagem cubra toda a tela sem esticar desproporcionalmente */
+  background-size: cover; 
+
+  /* Centraliza a imagem na tela */
+  background-position: center center; 
+
+  /* Impede que a imagem fique se repetindo como um mosaico */
+  background-repeat: no-repeat; 
+
+  /* Trava a imagem no fundo para não rolar junto com a página */
+  background-attachment: fixed; 
+
+  /* Cor de fundo reserva caso a imagem demore para carregar */
+  background-color: #f4f4f4; 
+}
