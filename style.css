@@ -41,6 +41,19 @@ body {
   color: var(--text-primary);
   line-height: var(--line-height-body);
   font-size: 1.125rem;
+  min-height: 100vh;
+}
+
+/* Oculta/Exibe o conteúdo do site */
+.site-wrapper.hidden-content {
+  display: none;
+  opacity: 0;
+}
+
+.site-wrapper.visible-content {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.6s ease-in-out;
   padding-top: 90px;
   padding-bottom: 3rem;
 }
@@ -52,7 +65,7 @@ main {
 }
 
 /* ==========================================================================
-   3. TELA DE ABERTURA (COVER / SPLASH SCREEN TECNOLÓGICA)
+   3. TELA DE ABERTURA (COVER / SPLASH)
    ========================================================================== */
 .cover-screen {
   position: fixed;
@@ -62,7 +75,7 @@ main {
   height: 100vh;
   background-color: #04070d;
   background-image: 
-    radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.12) 0%, transparent 75%),
+    radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.15) 0%, transparent 75%),
     linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
   background-size: 100% 100%, 30px 30px, 30px 30px;
@@ -125,13 +138,12 @@ main {
   background: rgba(0, 240, 255, 0.1);
   color: var(--brand-color);
   border: 2px solid var(--brand-color);
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
+  padding: 1.1rem 3.5rem;
+  font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 2px;
   border-radius: 50px;
   cursor: pointer;
-  overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 0 20px var(--glow-color);
 }
@@ -140,7 +152,7 @@ main {
   background: var(--brand-color);
   color: #04070d;
   box-shadow: 0 0 35px var(--brand-color);
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-3px) scale(1.03);
 }
 
 @keyframes floatUp {
@@ -221,11 +233,11 @@ main {
    ========================================================================== */
 .tab-content {
   display: none;
-  animation: fadeIn 0.4s ease-in-out;
 }
 
 .tab-content.active {
   display: block;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -271,7 +283,7 @@ code {
 }
 
 /* ==========================================================================
-   6. ESTILIZAÇÃO DE TABELAS
+   6. TABELAS E COMPONENTES
    ========================================================================== */
 table {
   width: 100%;
@@ -293,9 +305,8 @@ th {
   color: var(--brand-color);
 }
 
-/* Responsividade simples para telas menores */
 @media (max-width: 768px) {
   .cover-title { font-size: 2.2rem; }
   .cover-subtitle { font-size: 1rem; }
-  .cover-btn { padding: 0.8rem 2rem; font-size: 1rem; }
+  .cover-btn { padding: 0.9rem 2.2rem; font-size: 1rem; }
 }
