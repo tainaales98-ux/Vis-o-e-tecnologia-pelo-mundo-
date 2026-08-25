@@ -87,7 +87,7 @@ main {
     radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.15) 0%, transparent 75%),
     linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-    url('seu-gif.gif'); /* <-- COLOQUE O NOME OU LINK DO SEU GIF AQUI */
+    url('fundo.gif'); 
     
   background-size: 100% 100%, 30px 30px, 30px 30px, cover;
   background-position: center center, center center, center center, center center;
