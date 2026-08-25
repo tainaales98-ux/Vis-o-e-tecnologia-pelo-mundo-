@@ -15,9 +15,9 @@
     <div class="cover-content">
       <div class="cover-badge">CIÊNCIA & TECNOCIÊNCIA</div>
       <h1 class="cover-title">Visão e Tecnologia<br>pelo Mundo</h1>
-      <p class="cover-subtitle">Inovação, acessibilidade e a física por trás do sentido da visão.</p>
+      <p class="cover-subtitle">Inovação, acessibilidade e a evolução física da luz.</p>
       <button class="cover-btn" onclick="Explorar()">
-        <span>Explorar</span>
+        <span>EXPLORAR</span>
       </button>
     </div>
   </div>
@@ -34,6 +34,7 @@
         <nav>
           <ul class="nav-menu">
             <li><a class="tab-link active" onclick="openTab(event, 'inicio')">Início</a></li>
+            <li><a class="tab-link" onclick="openTab(event, 'historia-luz')">História da Luz</a></li>
             <li><a class="tab-link" onclick="openTab(event, 'bengala-sensor')">Sensor</a></li>
             <li><a class="tab-link" onclick="openTab(event, 'como-enxergamos')">Olho Humano</a></li>
             <li><a class="tab-link" onclick="openTab(event, 'fisica-da-visao')">Física</a></li>
@@ -62,7 +63,148 @@
         </div>
       </section>
 
-      <!-- Aba 2: Sensor / Bengala -->
+      <!-- Aba 2: História da Luz (Artigo Científico & Perguntas) -->
+      <section id="historia-luz" class="site-section tab-content">
+        <article class="paper-container">
+          <header class="paper-header">
+            <span class="paper-category">ARTIGO CIENTÍFICO</span>
+            <h1 class="paper-title">A Evolução Histórica e Conceitual da Natureza da Luz: Da Antiguidade à Dualidade Onda-Partícula</h1>
+          </header>
+
+          <div class="paper-resumo">
+            <h3>Resumo</h3>
+            <p>O entendimento sobre a natureza da luz representa uma das jornadas mais ricas e complexas da história da ciência. Este artigo revisita a evolução do pensamento óptico, partindo das primeiras especulações filosóficas na Antiguidade Clássica até a consolidação da mecânica quântica no século XX. Analisam-se o embate setecentista entre as teorias corpuscular e ondulatória, a unificação eletromagnética do século XIX e, por fim, a resolução do paradoxo por meio da dualidade onda-partícula. O objetivo é demonstrar como o refinamento dos métodos experimentais moldou a transição da física clássica para a moderna.</p>
+          </div>
+
+          <h2>1. Introdução</h2>
+          <p>A busca por compreender o mecanismo da visão e a constituição da luz instiga a humanidade há milênios. O debate central alternou-se, historicamente, entre modelos baseados em fluxos de matéria e modelos baseados em perturbações do meio. Este trabalho expõe cronologicamente os principais marcos dessa evolução, evidenciando como grandes nomes da ciência reinterpretaram o mesmo fenômeno sob diferentes paradigmas.</p>
+
+          <h2>2. A Óptica na Antiguidade Clássica</h2>
+          <p>Os primeiros ensaios teóricos sobre a luz surgiram na Grécia Antiga, divididos em três correntes principais de pensamento:</p>
+          <ul>
+            <li><strong>Teoria da Emissão (Extromissão):</strong> Defendida por Pitágoras e Euclides, propunha que os olhos emitiam raios ou "tentáculos" visuais que tocavam os objetos, gerando a percepção visual.</li>
+            <li><strong>Teoria da Intromissão:</strong> Sustentada por Demócrito e os atomistas, afirmava o oposto. Os corpos emitiam réplicas microscópicas de si mesmos, denominadas <em>eidolas</em>, que viajavam pelo espaço até atingirem os olhos do observador.</li>
+            <li><strong>O Meio-Termo Aristotélico:</strong> Rejeitando a corporeidade da luz, Aristóteles sugeriu que ela não era um objeto em movimento, mas sim uma modificação ou pulsação do meio transparente interposto (como o ar ou a água) entre o objeto e o órgão visual.</li>
+          </ul>
+
+          <h2>3. O Século XVII e a Divergência Conceitual</h2>
+          
+          <div class="sub-block">
+            <h3>3.1 O Modelo Ondulatório de Christiaan Huygens</h3>
+            <p>Em contraposição às ideias de propagação material pura, o físico holandês Christiaan Huygens propôs que a luz consistia em uma onda mecânica longitudinal, similar ao som. Para fundamentar a propagação geométrica dessas ondas, formulou o <strong>Princípio de Huygens</strong>:</p>
+            <blockquote class="quote-box">
+              "Cada ponto de uma frente de onda comporta-se como uma fonte de ondas secundárias esféricas. A nova frente de onda principal é dada pela linha tangente a essas ondas secundárias."
+            </blockquote>
+            <p>Como as ondas mecânicas exigem um suporte material para se propagar, Huygens postulou a existência do <strong>Éter Luminífero</strong>, um meio invisível, imponderável e altamente elástico que preencheria o vácuo universal. Seu modelo obteve grande êxito em explicar geometricamente as leis da reflexão e da refração.</p>
+          </div>
+
+          <div class="sub-block">
+            <h3>3.2 A Teoria Corpuscular de Isaac Newton</h3>
+            <p>Simultaneamente, Isaac Newton desenvolveu a Teoria Corpuscular, sugerindo que a luz era composta por um feixe de partículas minúsculas (corpúsculos) emitidas por fontes luminosas. O prestígio de Newton consolidou-se através de contribuições experimentais cruciais relatadas em sua obra <em>Opticks</em> (1704):</p>
+            <ul>
+              <li><strong>Dispersão da Luz:</strong> Demonstrou que a luz branca solar é uma mistura latente de todas as cores do espectro. Ao passar a luz por um prisma de vidro, ela se decompunha; ao utilizar um segundo prisma invertido, as cores se recombinavam em luz branca, provando que o cristal apenas separava os componentes preexistentes.</li>
+              <li><strong>O Telescópio Refletor:</strong> Para mitigar a aberração cromática inerente às lentes das lunetas refratoras da época, Newton desenvolveu um telescópio baseado em um espelho côncavo, revolucionando a instrumentação astronômica.</li>
+            </ul>
+            <p>Devido à influência de Newton, o modelo corpuscular predominou na comunidade científica durante todo o século XVIII.</p>
+          </div>
+
+          <h2>4. O Século XIX: O Triunfo do Caráter Ondulatório</h2>
+          
+          <div class="sub-block">
+            <h3>4.1 Thomas Young e a Evidência Experimental da Interferência</h3>
+            <p>O paradigma corpuscular foi severamente desafiado em 1801 por Thomas Young através do <strong>Experimento da Dupla Fenda</strong>. Ao direcionar um feixe de luz por duas fendas estreitas e próximas, Young observou em um anteparo um padrão alternado de franjas claras e escuras. Esse fenômeno decorre da difração e da interferência (construtiva e destrutiva) das frentes de onda, propriedades exclusivas de sistemas ondulatórios, fornecendo a primeira prova contundente contra a natureza estritamente corpuscular de Newton.</p>
+          </div>
+
+          <div class="sub-block">
+            <h3>4.2 A Síntese Eletromagnética de Maxwell</h3>
+            <p>Na segunda metade do século XIX, James Clerk Maxwell unificou os fenômenos elétricos e magnéticos em um conjunto de equações diferenciais. Maxwell demonstrou teoricamente que a oscilação de um campo elétrico gera um campo magnético perpendicular, e vice-versa, propagando-se pelo espaço na forma de uma onda eletromagnética.</p>
+            <p>Ao calcular a velocidade teórica dessas ondas no vácuo através das constantes de permissividade elétrica e permeabilidade magnética, o valor obtido coincidiu com a velocidade da luz previamente mensurada em laboratório. Maxwell concluiu, portanto, que a luz é uma onda eletromagnética, prescindindo de um meio mecânico para sua propagação.</p>
+          </div>
+
+          <h2>5. O Século XX e o Paradoxo Quântico</h2>
+
+          <div class="sub-block">
+            <h3>5.1 Max Planck e Albert Einstein: O Fóton e o Efeito Fotoelétrico</h3>
+            <p>A virada do século revelou fenômenos que o eletromagnetismo clássico era incapaz de solucionar. O principal deles foi o <strong>Efeito Fotoelétrico</strong> — a emissão de elétrons por superfícies metálicas expostas à radiação. Pela física clássica, a energia cinética dos elétrons ejetados deveria aumentar proporcionalmente à intensidade (amplitude) da onda luminosa. Contudo, os experimentos indicavam que a ejeção dependia exclusivamente da frequência (cor) da luz incidente.</p>
+            <p>Em 1905, expandindo os conceitos de quantização de Max Planck, Albert Einstein propôs que a luz interagia com a matéria não como uma onda contínua, mas sim em pacotes discretos e indivisíveis de energia, posteriormente denominados <strong>fótons</strong>. A energia de cada fóton é quantificada pela equação:</p>
+            <p class="formula-box"><code>E = h · f</code></p>
+            <p>Onde <em>h</em> é a constante de Planck e <em>f</em> é a frequência da onda. Cada fóton colide de forma corpuscular com um único elétron, transferindo-lhe energia. Essa explicação rendeu a Einstein o Prêmio Nobel de Física em 1921.</p>
+          </div>
+
+          <div class="sub-block">
+            <h3>5.2 Louis de Broglie e a Dualidade Onda-Partícula</h3>
+            <p>O impasse secular sobre se a luz seria onda ou partícula encontrou sua síntese em 1924 com Louis de Broglie. Inspirado pela proposta quântica da luz, De Broglie estendeu a hipótese à matéria, postulando que qualquer corpo em movimento possui uma natureza dual. O comprimento de onda associado é dado por:</p>
+            <p class="formula-box"><code>λ = h / p</code></p>
+            <p>A hipótese de De Broglie estabeleceu definitivamente a <strong>Dualidade Onda-Partícula</strong>: a luz (e a matéria em escala subatômica) manifesta propriedades ondulatórias ou corpusculares dependendo do arranjo experimental ao qual é submetida. Em processos de propagação no espaço, comporta-se predominantemente como onda; em processos de emissão, absorção e interação com a matéria, comporta-se como partícula.</p>
+          </div>
+
+          <h2>6. Conclusão</h2>
+          <p>A evolução das teorias sobre a luz ilustra o próprio amadurecimento do método científico. O conflito entre os modelos de Huygens e Newton, longe de ser um erro histórico, impulsionou o refinamento experimental que culminou nas equações de Maxwell e na mecânica quântica de Einstein e De Broglie. Hoje, a óptica moderna não anula o passado, mas integra ambas as visões, reconhecendo na luz uma entidade de natureza dual que desafia as intuições puramente macroscópicas.</p>
+
+          <h2>Referências</h2>
+          <ul class="ref-list">
+            <li><strong>NEWTON, Isaac.</strong> <em>Opticks: or, a treatise of the reflections, refractions, inflections and colours of light.</em> London, 1704.</li>
+            <li><strong>HUYGENS, Christiaan.</strong> <em>Treatise on Light.</em> Leyden, 1690.</li>
+            <li><strong>MAXWELL, James Clerk.</strong> <em>A Dynamical Theory of the Electromagnetic Field.</em> Philosophical Transactions of the Royal Society of London, 1865.</li>
+            <li><strong>EINSTEIN, Albert.</strong> <em>Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt.</em> Annalen der Physik, 1905.</li>
+            <li><strong>DE BROGLIE, Louis.</strong> <em>Recherches sur la théorie des quanta.</em> Annales de Physique, 1925.</li>
+          </ul>
+
+          <!-- Perguntas e Respostas Detalhadas -->
+          <div class="qa-section">
+            <h2>Perguntas e Respostas sobre a Natureza da Luz</h2>
+
+            <div class="qa-card">
+              <h3>a) Quais foram as primeiras teorias propostas na Antiguidade sobre a luz?</h3>
+              <p>Na Antiguidade Clássica, os filósofos gregos tentavam explicar a visão e a luz por meio de duas vertentes principais:</p>
+              <ul>
+                <li><strong>Teoria da Emissão (ou Extromissão):</strong> Defendida por pensadores como Pitágoras e Euclides, propunha que os nossos olhos emitiam "raios visuais" ou tentáculos táteis que viajavam até os objetos, permitindo-nos "tocá-los" com o olhar e, assim, enxergar.</li>
+                <li><strong>Teoria da Intromissão:</strong> Defendida por Demócrito e os atomistas, sustentava o oposto: os objetos emitiam partículas ou réplicas microscópicas de si mesmos (chamadas <em>eidolas</em>), que viajavam pelo ar e entravam em nossos olhos.</li>
+                <li><strong>Aristóteles:</strong> Ficou no meio-termo, rejeitando as duas ideias. Para ele, a luz não era um objeto físico em movimento, mas sim uma modificação ou pulsação do meio transparente (como o ar ou a água) situado entre o objeto e o olho.</li>
+              </ul>
+            </div>
+
+            <div class="qa-card">
+              <h3>b) Como Huygens descrevia a luz?</h3>
+              <p>No século XVII, o físico holandês Christiaan Huygens propôs que a luz era uma onda mecânica longitudinal, de forma muito semelhante ao som.</p>
+              <p><strong>O Princípio de Huygens:</strong> Para explicar como a luz se propagava, ele desenvolveu uma lógica geométrica: cada ponto de uma frente de onda de luz se comporta como uma nova fonte de ondas secundárias (esféricas). A nova frente de onda principal é a tangente a todas essas ondas secundárias.</p>
+              <p><strong>O meio de propagação:</strong> Como as ondas mecânicas precisam de um meio para viajar, Huygens propôs a existência do <em>Éter Luminífero</em>, uma substância invisível, extremamente elástica e sutil que preenchia todo o universo. Com esse modelo, ele explicou perfeitamente os fenômenos de reflexão e refração.</p>
+            </div>
+
+            <div class="qa-card">
+              <h3>c) Qual foi a contribuição dos estudos de Isaac Newton para a evolução da Óptica?</h3>
+              <p>Newton defendia a <strong>Teoria Corpuscular</strong>, argumentando que a luz era composta por um fluxo de partículas minúsculas (corpúsculos) emitidas por corpos luminosos. Suas principais contribuições foram:</p>
+              <ul>
+                <li><strong>A Dispersão da Luz (Decomposição):</strong> Provou que a luz branca do Sol é uma mistura de todas as cores do arco-íris. Ao passar um feixe por um prisma, ela se dividia em várias cores, e usando um segundo prisma invertido reunia-as de volta em luz branca.</li>
+                <li><strong>O Telescópio Refletor:</strong> Para evitar a aberração cromática das lentes da época, inventou um telescópio que usava um espelho côncavo em vez de lentes, revolucionando a astronomia.</li>
+                <li><strong>O livro Opticks (1704):</strong> Estabeleceu a óptica como uma ciência experimental rigorosa, analisando detalhadamente a reflexão, a refração e a formação de cores.</li>
+              </ul>
+            </div>
+
+            <div class="qa-card">
+              <h3>d) Qual foi a contribuição dos estudos de Young sobre o problema da natureza da luz?</h3>
+              <p>Thomas Young mudou o rumo da física em 1801 com o famoso <strong>Experimento da Dupla Fenda</strong>. Ele demonstrou que, ao passar a luz por duas fendas estreitas e próximas, ela sofria os fenômenos de <strong>difração e interferência</strong>, projetando um padrão de franjas claras e escuras. Como esses comportamentos são exclusivos de sistemas ondulatórios, o experimento de Young foi a prova crucial de que a luz possuía natureza ondulatória.</p>
+            </div>
+
+            <div class="qa-card">
+              <h3>e) Como a teoria do Eletromagnetismo, de Maxwell, explicou a luz?</h3>
+              <p>Na segunda metade do século XIX, James Clerk Maxwell unificou a eletricidade e o magnetismo. Ele demonstrou que perturbações em campos elétricos e magnéticos se propagariam pelo espaço na forma de uma onda eletromagnética. Ao calcular a velocidade teórica dessas ondas, o resultado foi idêntico à velocidade da luz. Maxwell concluiu que a <strong>luz é uma onda eletromagnética</strong> composta por campos elétricos e magnéticos oscilatórios e perpendiculares entre si.</p>
+            </div>
+
+            <div class="qa-card">
+              <h3>f) Por que Einstein precisou considerar a existência de fótons para explicar a luz?</h3>
+              <p>Para explicar o <strong>Efeito Fotoelétrico</strong> (emissão de elétrons por metais iluminados). Pela física clássica ondulatória, a energia do elétron deveria depender da intensidade (brilho) da luz, mas os experimentos mostravam que dependia apenas da frequência (cor). Einstein propôs que a luz interagia em pacotes discretos e indivisíveis de energia — os <strong>fótons</strong> (<code>E = h · f</code>). Cada fóton transfere sua energia de forma total a um único elétron, o que lhe rendeu o Prêmio Nobel.</p>
+            </div>
+
+            <div class="qa-card">
+              <h3>g) Como De Broglie elucidou uma antiga questão sobre a natureza da luz?</h3>
+              <p>Louis de Broglie unificou o debate ao propor a <strong>Dualidade Onda-Partícula</strong>. Ele sugeriu que se a luz (uma onda) agia como partícula, então partículas de matéria (como elétrons) também deveriam apresentar propriedades ondulatórias associadas, calculadas por <code>λ = h / p</code>. Ele encerrou a disputa mostrando que a luz e a matéria possuem natureza dual, comportando-se como onda ou partícula dependendo do experimento.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Aba 3: Sensor / Bengala -->
       <section id="bengala-sensor" class="site-section tab-content">
         <h2>Bengala com Sensor de Presença</h2>
         <p>A bengala com sensor de presença é um dispositivo assistivo equipado com tecnologia que detecta obstáculos próximos ao usuário. Projetada para auxiliar pessoas com deficiência visual, ela utiliza sensores que emitem sinais e captam sua reflexão, alertando o usuário sobre barreiras no caminho através de vibrações ou sons. Esta tecnologia proporciona maior segurança e autonomia na locomoção diária.</p>
@@ -106,7 +248,7 @@
         </div>
       </section>
 
-      <!-- Aba 3: Olho Humano -->
+      <!-- Aba 4: Olho Humano -->
       <section id="como-enxergamos" class="site-section tab-content">
         <h2>Como Enxergamos?</h2>
         <h3>Anatomia do Olho Humano</h3>
@@ -129,7 +271,7 @@
         <p>As células da retina convertem a energia luminosa (fótons) em impulsos elétricos. O nervo óptico funciona como um cabo de fibra óptica, transmitindo esses sinais para o cérebro (córtex visual), que interpreta e "desvira" a imagem em tempo real.</p>
       </section>
 
-      <!-- Aba 4: Física da Visão -->
+      <!-- Aba 5: Física da Visão -->
       <section id="fisica-da-visao" class="site-section tab-content">
         <h2>A Física da Visão</h2>
         <h3>O que é Luz e o Espectro Eletromagnético</h3>
@@ -153,7 +295,7 @@
         </ul>
       </section>
 
-      <!-- Aba 5: Deficiências Visual -->
+      <!-- Aba 6: Deficiências Visual -->
       <section id="deficiencia-visual" class="site-section tab-content">
         <h2>Deficiência Visual: O que Acontece?</h2>
         <p>As deficiências visuais ocorrem quando a estrutura física do olho ou a transmissão do sinal óptico falham:</p>
@@ -167,7 +309,7 @@
         </ul>
       </section>
 
-      <!-- Aba 6: Óculos -->
+      <!-- Aba 7: Óculos -->
       <section id="como-funcionam-os-oculos" class="site-section tab-content">
         <h2>Como Funcionam os Óculos?</h2>
         <p>Quando o formato do olho não permite que a luz foque exatamente sobre a retina, ocorrem os erros de refração. Os óculos usam lentes para desviar a luz antes de ela entrar no olho, garantindo o foco correto.</p>
@@ -195,7 +337,7 @@
         </ul>
       </section>
 
-      <!-- Aba 7: Tecnologias Assistivas -->
+      <!-- Aba 8: Tecnologias Assistivas -->
       <section id="tecnologias-assistivas" class="site-section tab-content">
         <h2>Tecnologias Assistivas</h2>
         <p>As tecnologias assistivas são ferramentas que promovem a autonomia e a inclusão de pessoas com deficiência visual.</p>
@@ -225,7 +367,7 @@
         </div>
       </section>
 
-      <!-- Aba 8: Experimentos -->
+      <!-- Aba 9: Experimentos -->
       <section id="experimentos" class="site-section tab-content">
         <h2>Experimentos Práticos</h2>
         <p><em>Nota: Estes experimentos ajudam a entender como a luz se comporta e como nossos olhos processam as imagens.</em></p>
@@ -273,7 +415,7 @@
         </table>
       </section>
 
-      <!-- Aba 9: Mais / Outros -->
+      <!-- Aba 10: Mais / Outros -->
       <section id="outros" class="site-section tab-content">
         <div id="curiosidades">
           <h2>Curiosidades Científicas</h2>
@@ -296,7 +438,7 @@
         </div>
         
         <div id="noticias-e-tecnologias" class="sub-block">
-          <h2>Noticias Recentes e Tecnologias</h2>
+          <h2>Notícias Recentes e Tecnologias</h2>
           <ul>
             <li><strong>Óculos Inteligentes:</strong> Marcas de tecnologia lançaram modelos de óculos equipados com Inteligência Artificial e telas integradas às lentes, capazes de traduzir conversas em tempo real, dar direções de navegação e descrever objetos ao redor.</li>
             <li><strong>Visão Artificial e Implantes de Retina:</strong> O chip microfotônico PRIMA obteve aprovações regulatórias para restauração de visão. Ele é implantado sob a retina e recebe feixes de luz infravermelha enviados por óculos especiais, permitindo que pacientes com cegueira por degeneração macular recuperem a capacidade de ler e reconhecer rostos.</li>
@@ -356,6 +498,9 @@
 
       document.getElementById(tabName).classList.add("active");
       evt.currentTarget.classList.add("active");
+
+      // Rola suavemente para o topo da seção
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 

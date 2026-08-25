@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. VARIÁVEIS DE DESIGN E CORES (Estética Tecnológica)
+   1. VARIÁVEIS DE DESIGN E CORES (Estética Tecnológica e Científica)
    ========================================================================== */
 :root {
   --bg-primary: #080c14;
@@ -8,6 +8,7 @@
   --text-secondary: #94a3b8;
   --brand-color: #00f0ff;
   --brand-hover: #38bdf8;
+  --accent-gold: #f59e0b;
   --border-color: #1e293b;
   --glow-color: rgba(0, 240, 255, 0.35);
 
@@ -283,7 +284,109 @@ code {
 }
 
 /* ==========================================================================
-   6. TABELAS E COMPONENTES
+   6. ESTILIZAÇÃO ESPECÍFICA DO ARTIGO CIENTÍFICO (HISTÓRIA DA LUZ)
+   ========================================================================== */
+.paper-container {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.paper-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.paper-category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--brand-color);
+  background: rgba(0, 240, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+}
+
+.paper-title {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-top: 1rem !important;
+  color: #ffffff !important;
+}
+
+.paper-resumo {
+  background: rgba(0, 240, 255, 0.04);
+  border-left: 4px solid var(--brand-color);
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.paper-resumo h3 {
+  margin-top: 0 !important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote-box {
+  background: #131d31;
+  border-left: 3px solid var(--accent-gold);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #e2e8f0;
+}
+
+.formula-box {
+  text-align: center;
+  background: #090e1a;
+  border: 1px dashed var(--brand-color);
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  font-size: 1.2rem;
+}
+
+.ref-list {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.ref-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* Questionário Q&A final */
+.qa-section {
+  margin-top: 3.5rem;
+  border-top: 2px dashed var(--border-color);
+  padding-top: 2rem;
+}
+
+.qa-card {
+  background: #0b1329;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.qa-card h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   7. TABELAS E RESPONSIVIDADE
    ========================================================================== */
 table {
   width: 100%;
@@ -309,4 +412,6 @@ th {
   .cover-title { font-size: 2.2rem; }
   .cover-subtitle { font-size: 1rem; }
   .cover-btn { padding: 0.9rem 2.2rem; font-size: 1rem; }
+  .paper-container { padding: 1.2rem; }
+  .paper-title { font-size: 1.6rem; }
 }
