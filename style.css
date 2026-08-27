@@ -415,3 +415,121 @@ th {
   .paper-container { padding: 1.2rem; }
   .paper-title { font-size: 1.6rem; }
 }
+/* Estilo futurista / tecnológico para o Simulador */
+#deficiencia-visual {
+  background-color: #0b0f19;
+  color: #c0cdf0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#deficiencia-visual h2, 
+#deficiencia-visual h3 {
+  color: #00f2fe;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 10px;
+}
+
+/* Lista de descrições */
+#deficiencia-visual ul {
+  list-style: none;
+  padding: 0;
+}
+
+#deficiencia-visual li {
+  background: rgba(15, 23, 42, 0.6);
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-left: 3px solid #00f2fe;
+  border-radius: 0 6px 6px 0;
+  transition: transform 0.2s ease;
+}
+
+#deficiencia-visual li:hover {
+  transform: translateX(5px);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+#deficiencia-visual li strong {
+  color: #ffffff;
+}
+
+/* Controles e Seleção */
+.controls {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+select#condition {
+  background-color: #0f172a;
+  color: #00f2fe;
+  border: 1px solid #00f2fe;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+  transition: all 0.3s ease;
+}
+
+select#condition:hover, 
+select#condition:focus {
+  background-color: #1e293b;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+
+/* Moldura da Imagem (Display Tecnológico) */
+.image-container {
+  position: relative;
+  margin-top: 20px;
+  display: inline-block;
+  border: 2px solid #00f2fe;
+  border-radius: 8px;
+  padding: 8px;
+  background: #020617;
+  box-shadow: inset 0 0 15px rgba(0, 242, 254, 0.2), 0 0 20px rgba(0, 242, 254, 0.15);
+}
+
+/* Efeito de mira/HUD sobre a imagem */
+.image-container::before {
+  content: 'SIMULATION // LIVE FEED';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: #00f2fe;
+  background: rgba(2, 6, 23, 0.8);
+  padding: 2px 6px;
+  border-radius: 3px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#target-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  transition: filter 0.4s ease;
+}
