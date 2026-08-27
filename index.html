@@ -310,67 +310,21 @@
       </section>
 
       <!-- Aba 6: Deficiências Visuais -->
-      <section id="deficiencia-visual" class="site-section tab-content">
-        <h2>Deficiência Visual: O que Acontece?</h2>
-        <p>As deficiências visuais ocorrem quando a estrutura física do olho ou a transmissão do sinal óptico falham:</p>
-        <ul>
-          <li><strong>Cegueira:</strong> Perda total ou quase total da visão. Fisicamente, ocorre quando a luz não consegue chegar à retina, quando os fotorreceptores são destruídos ou quando o nervo óptico não transmite o sinal.</li>
-          <li><strong>Baixa Visão:</strong> Limitação severa da função visual que não pode ser totalmente corrigida com óculos ou cirurgia.</li>
-          <li><strong>Catarata:</strong> O cristalino (a lente natural) torna-se opaco devido à agregação de proteínas. <em>Na Física:</em> Diminui a transmitância da luz, espalhando-a em vez de focá-la, tornando a imagem embaçada.</li>
-          <li><strong>Glaucoma:</strong> Aumento da pressão interna do olho que danifica progressivamente as fibras do nervo óptico. <em>Na Física:</em> Impede que a informação elétrica chegue ao cérebro, reduzindo o campo de visão (visão tubular).</li>
-          <li><strong>Degeneração Macular:</strong> Danos na mácula (centro da retina). Destrói a visão central de alta resolução, afetando a percepção fina de detalhes e cores.</li>
-          <li><strong>Daltonismo:</strong> Falha genética na produção ou funcionamento de um ou mais tipos de cones (fotorreceptores). <em>Na Física/Biologia:</em> O cérebro deixa de distinguir certas frequências da luz visível (geralmente entre o verde e o vermelho).</li>
-        </ul>
-      </section>
+<section id="deficiencia-visual" class="site-section tab-content">
+  <h2>Deficiência Visual: O que Acontece?</h2>
+  <p>As deficiências visuais ocorrem quando a estrutura física do olho ou a transmissão do sinal óptico falham:</p>
+  <ul>
+    <li><strong>Cegueira:</strong> Perda total ou quase total da visão. Fisicamente, ocorre quando a luz não consegue chegar à retina, quando os fotorreceptores são destruídos ou quando o nervo óptico não transmite o sinal.</li>
+    <li><strong>Baixa Visão:</strong> Limitação severa da função visual que não pode ser totalmente corrigida com óculos ou cirurgia.</li>
+    <li><strong>Catarata:</strong> O cristalino (a lente natural) torna-se opaco devido à agregação de proteínas. <em>Na Física:</em> Diminui a transmitância da luz, espalhando-a em vez de focá-la, tornando a imagem embaçada.</li>
+    <li><strong>Glaucoma:</strong> Aumento da pressão interna do olho que danifica progressivamente as fibras do nervo óptico. <em>Na Física:</em> Impede que a informação elétrica chegue ao cérebro, reduzindo o campo de visão (visão tubular).</li>
+    <li><strong>Degeneração Macular:</strong> Danos na mácula (centro da retina). Destrói a visão central de alta resolução, afetando a percepção fina de detalhes e cores.</li>
+    <li><strong>Daltonismo:</strong> Falha genética na produção ou funcionamento de um ou mais tipos de cones (fotorreceptores). <em>Na Física/Biologia:</em> O cérebro deixa de distinguir certas frequências da luz visível (geralmente entre o verde e o vermelho).</li>
+  </ul>
 
-      <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Visão</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+  <hr>
 
-    .controls {
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .image-container {
-      margin-top: 20px;
-      overflow: hidden;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      transition: filter 0.3s ease;
-    }
-
-    /* SVG para simulação de daltonismo */
-    .svg-filters {
-      position: absolute;
-      width: 0;
-      height: 0;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Simulador de Deficiências Visuais</h1>
+  <h3>Simulador de Deficiências Visuais</h3>
   <p>Selecione uma condição para simular como uma pessoa com essa condição enxerga:</p>
 
   <div class="controls">
@@ -395,17 +349,15 @@
     <img id="target-image" src="teste de visao.jpg" alt="Imagem de demonstração">
   </div>
 
-  <!-- Filtros SVG para simulação de Daltonismo -->
-  <svg class="svg-filters">
+  <!-- Filtros SVG isolados dentro do container -->
+  <svg class="svg-filters" style="display: none;">
     <defs>
-      <!-- Deuteranopia -->
       <filter id="deuteranopia">
         <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
                                             0.7,   0.3,   0, 0, 0
                                             0,     0.3,   0.7, 0, 0
                                             0,     0,     0,   1, 0" />
       </filter>
-      <!-- Protanopia -->
       <filter id="protanopia">
         <feColorMatrix type="matrix" values="0.56667, 0.43333, 0, 0, 0
                                             0.55833, 0.44167, 0, 0, 0
@@ -414,47 +366,48 @@
       </filter>
     </defs>
   </svg>
+</section>
 
-  <script>
+<script>
+  // Script isolado para a funcionalidade da aba
+  document.addEventListener('DOMContentLoaded', () => {
     const select = document.getElementById('condition');
     const image = document.getElementById('target-image');
 
-    select.addEventListener('change', (e) => {
-      const value = e.target.value;
+    if (select && image) {
+      select.addEventListener('change', (e) => {
+        const value = e.target.value;
 
-      switch (value) {
-        case 'miopia-leve':
-          image.style.filter = 'blur(2px)';
-          break;
-        case 'miopia-moderada':
-          image.style.filter = 'blur(5px)';
-          break;
-        case 'miopia-alta':
-          image.style.filter = 'blur(10px)';
-          break;
-        case 'astigmatismo':
-          // Simula distorção e desfoque leve
-          image.style.filter = 'blur(2px) contrast(120%)';
-          break;
-        case 'catarata':
-          // Simula desfoque e perda de contraste/brilho
-          image.style.filter = 'blur(4px) brightness(80%) sepia(30%)';
-          break;
-        case 'deuteranopia':
-          image.style.filter = 'url(#deuteranopia)';
-          break;
-        case 'protanopia':
-          image.style.filter = 'url(#protanopia)';
-          break;
-        default:
-          image.style.filter = 'none';
-          break;
-      }
-    });
-  </script>
-
-</body>
-</html>
+        switch (value) {
+          case 'miopia-leve':
+            image.style.filter = 'blur(2px)';
+            break;
+          case 'miopia-moderada':
+            image.style.filter = 'blur(5px)';
+            break;
+          case 'miopia-alta':
+            image.style.filter = 'blur(10px)';
+            break;
+          case 'astigmatismo':
+            image.style.filter = 'blur(2px) contrast(120%)';
+            break;
+          case 'catarata':
+            image.style.filter = 'blur(4px) brightness(80%) sepia(30%)';
+            break;
+          case 'deuteranopia':
+            image.style.filter = 'url(#deuteranopia)';
+            break;
+          case 'protanopia':
+            image.style.filter = 'url(#protanopia)';
+            break;
+          default:
+            image.style.filter = 'none';
+            break;
+        }
+      });
+    }
+  });
+</script>
 
       <!-- Aba 7: Óculos -->
       <section id="como-funcionam-os-oculos" class="site-section tab-content">
