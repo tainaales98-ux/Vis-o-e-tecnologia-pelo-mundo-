@@ -323,6 +323,139 @@
         </ul>
       </section>
 
+      <html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Visão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .controls {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .image-container {
+      margin-top: 20px;
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    /* SVG para simulação de daltonismo */
+    .svg-filters {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simulador de Deficiências Visuais</h1>
+  <p>Selecione uma condição para simular como uma pessoa com essa condição enxerga:</p>
+
+  <div class="controls">
+    <label for="condition">Escolha o tipo de visão:</label>
+    <select id="condition">
+      <option value="normal">Visão Normal</option>
+      <optgroup label="Miopia (Desfoque)">
+        <option value="miopia-leve">Miopia Leve (-1.00D)</option>
+        <option value="miopia-moderada">Miopia Moderada (-3.00D)</option>
+        <option value="miopia-alta">Miopia Alta (-6.00D)</option>
+      </optgroup>
+      <optgroup label="Outras Condições">
+        <option value="astigmatismo">Astigmatismo</option>
+        <option value="catarata">Catarata</option>
+        <option value="deuteranopia">Daltonismo (Deuteranopia - Verde)</option>
+        <option value="protanopia">Daltonismo (Protanopia - Vermelho)</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="image-container">
+    <img id="target-image" src="imagem aqui" alt="Imagem de demonstração">
+  </div>
+
+  <!-- Filtros SVG para simulação de Daltonismo -->
+  <svg class="svg-filters">
+    <defs>
+      <!-- Deuteranopia -->
+      <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
+                                            0.7,   0.3,   0, 0, 0
+                                            0,     0.3,   0.7, 0, 0
+                                            0,     0,     0,   1, 0" />
+      </filter>
+      <!-- Protanopia -->
+      <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.56667, 0.43333, 0, 0, 0
+                                            0.55833, 0.44167, 0, 0, 0
+                                            0,       0.24167, 0.75833, 0, 0
+                                            0,       0,       0,       1, 0" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script>
+    const select = document.getElementById('condition');
+    const image = document.getElementById('target-image');
+
+    select.addEventListener('change', (e) => {
+      const value = e.target.value;
+
+      switch (value) {
+        case 'miopia-leve':
+          image.style.filter = 'blur(2px)';
+          break;
+        case 'miopia-moderada':
+          image.style.filter = 'blur(5px)';
+          break;
+        case 'miopia-alta':
+          image.style.filter = 'blur(10px)';
+          break;
+        case 'astigmatismo':
+          // Simula distorção e desfoque leve
+          image.style.filter = 'blur(2px) contrast(120%)';
+          break;
+        case 'catarata':
+          // Simula desfoque e perda de contraste/brilho
+          image.style.filter = 'blur(4px) brightness(80%) sepia(30%)';
+          break;
+        case 'deuteranopia':
+          image.style.filter = 'url(#deuteranopia)';
+          break;
+        case 'protanopia':
+          image.style.filter = 'url(#protanopia)';
+          break;
+        default:
+          image.style.filter = 'none';
+          break;
+      }
+    });
+  </script>
+
+</body>
+</html>
+
       <!-- Aba 7: Óculos -->
       <section id="como-funcionam-os-oculos" class="site-section tab-content">
         <h2>Como Funcionam os Óculos?</h2>
